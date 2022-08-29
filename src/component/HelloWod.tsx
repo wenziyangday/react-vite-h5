@@ -1,29 +1,22 @@
-import "@/App.css";
+import { useState } from 'react';
 
-import { useState } from "react";
-
-import Logon from "@/assets/react.svg";
-import HelloWorld from "@/component/HelloWord";
-
-function App() {
+function HelloWorld() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <HelloWorld />
       <h1>Vite + React</h1>
-      <img src={Logon} alt="" />
       <div className="card">
-        <button type="submit" onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count) => count + 1)}>
           count is
-          {" "}
+          {' '}
           {count}
         </button>
         <p>
           Edit
-          {" "}
+          {' '}
           <code>src/App.tsx</code>
-          {" "}
+          {' '}
           and save to test HMR
         </p>
       </div>
@@ -34,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default HelloWorld;
