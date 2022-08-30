@@ -14,17 +14,11 @@ function App() {
       <h1>Vite + React</h1>
       <img src={Logon} alt="" />
       <div className="card">
-        <button type="submit" onClick={() => setCount((count) => count + 1)}>
-          count is
-          {" "}
-          {count}
+        <button type="submit" onClick={() => setCount((_count) => _count + 1)}>
+          count is {count}
         </button>
         <p>
-          Edit
-          {" "}
-          <code>src/App.tsx</code>
-          {" "}
-          and save to test HMR
+          Edit<code>src/App.tsx</code>and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
