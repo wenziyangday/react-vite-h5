@@ -1,15 +1,18 @@
 import "@/App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 import { useState } from "react";
 
 import Logon from "@/assets/react.svg";
 import HelloWorld from "@/component/HelloWord";
+import MapBoxGl from "@/component/map/MapBoxGl";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
+      <MapBoxGl />
       <HelloWorld />
       <h1>Vite + React</h1>
       <img src={Logon} alt="" />

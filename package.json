@@ -9,13 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mapbox/mapbox-gl-language": "^1.0.0",
     "@types/node": "^18.7.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "deck.gl": "^8.8.9",
+    "mapbox-gl": "^2.10.0",
     "postcss-px-to-viewport-8-plugin": "^1.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-map-gl": "^7.0.19",
     "typescript": "^4.8.2",
     "vite": "^3.0.7"
   },
