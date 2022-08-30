@@ -1,5 +1,6 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
+// import px2rem from "postcss-px2rem";
 import postCssPxToViewport from "postcss-px-to-viewport-8-plugin";
 import { defineConfig } from "vite";
 
@@ -25,6 +26,11 @@ export default defineConfig(() => ({
           // exclude: [],
           landscape: false // 是否处理横屏情况
         })
+
+        // px2rem({
+        //   remUnit: 75,
+        //   remPrecision: 8
+        // })
       ]
     }
   },

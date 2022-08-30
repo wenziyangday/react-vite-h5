@@ -1,5 +1,6 @@
 import "@/index.css";
 
+// import "lib-flexible/flexible";
 import React from "react";
 import ReactDOM from "react-dom/client";
 

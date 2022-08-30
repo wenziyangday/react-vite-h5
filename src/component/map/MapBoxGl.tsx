@@ -5,7 +5,7 @@ const mapboxAccessToken = "pk.eyJ1IjoidmluY2VudHdlbiIsImEiOiJja2k2c2Z5aGQxdW90Mn
 
 function MapBoxGl() {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw", height: "70vh" }}>
       <Map
         initialViewState={{
           longitude: 120.764673,

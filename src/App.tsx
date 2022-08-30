@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import Logon from "@/assets/react.svg";
 import HelloWorld from "@/component/HelloWord";
+import AMapCon from "@/component/map/AMapCon";
 import MapBoxGl from "@/component/map/MapBoxGl";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <MapBoxGl />
+      <AMapCon />
       <HelloWorld />
       <h1>Vite + React</h1>
       <img src={Logon} alt="" />
