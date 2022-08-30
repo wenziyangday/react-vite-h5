@@ -123,7 +123,8 @@ module.exports = {
       vars: "all",
       args: "after-used"
     }], // 不允许有声明后未使用的变量或者参数
-    "no-use-before-define": [2, "nofunc"], // 不允许在未定义之前就使用变量"indent": 2, //强制一致的缩进风格
+    "no-use-before-define": [0, "nofunc"], // 不允许在未定义之前就使用变量
+    indent: 2, // 强制一致的缩进风格
     "brace-style": [2, "1tbs", {
       allowSingleLine: false
     }], // 大括号风格
@@ -203,7 +204,7 @@ module.exports = {
         ]
       }
     ],
-    "react/react-in-jsx-scope": "off", // jsx/tsx 开头必须引入 react
+    "react/react-in-jsx-scope": "off", // 不需要 jsx/tsx 开头必须引入 react
     "import/extensions": [
       "error",
       "ignorePackages",
