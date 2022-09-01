@@ -6,6 +6,10 @@ module.exports = {
       "files": ["**/*.tsx", "**/*.ts"],
       "customSyntax": "@stylelint/postcss-css-in-js",
     },
+    {
+      "files": ["**/*.less"],
+      "customSyntax": "postcss-less",
+    }
   ],
   rules: {
     "at-rule-empty-line-before": null,
@@ -237,6 +241,6 @@ module.exports = {
     "**/*.ttf",
     "**/*.woff",
     "**/*.svg",
-    "**/*.eslintignore"
+    "**/*.eslintignore",
   ],
 };
