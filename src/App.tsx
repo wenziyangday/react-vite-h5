@@ -9,12 +9,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div
-      className="app"
-      style={{
-        position: "absolute"
-      }}
-    >
+    <div className="app">
       <HelloWorld />
       <h1>Vite + React</h1>
       <img src={Logon} alt="" />
