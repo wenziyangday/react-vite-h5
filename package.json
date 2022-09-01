@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:css": "stylelint --aei *.css,*.less --fix src/",
-    "eslint": "eslint --ext .tsx,.ts src"
+    "eslint": "eslint --ext .tsx,.ts src",
+    "init-git-hooks": "npx husky install && npx husky add .husky/pre-commit \"yarn lint-staged\" && npx husky add .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'"
   },
   "dependencies": {
     "@types/node": "^18.7.13",
@@ -52,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'git commit trigger husky pre-commit hook text'"
+      "pre-commit": "echo 'git commit trigger husky pre-commit hook te23t'"
     }
   }
 }
