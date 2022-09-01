@@ -28,3 +28,6 @@ dist-ssr
 
 # yaml
 *.yaml
+
+# husky
+.husky
