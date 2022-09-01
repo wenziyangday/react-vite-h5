@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint:css": "stylelint **/*.css --fix"
+    "lint:css": "stylelint --aei *.css,*.less --fix src/",
+    "eslint": "eslint --ext .tsx,.ts src"
   },
   "dependencies": {
     "@types/node": "^18.7.13",
@@ -21,6 +22,8 @@
     "vite": "^3.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
@@ -32,9 +35,24 @@
     "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss-syntax": "^0.36.2",
     "stylelint": "^14.11.0",
     "stylelint-config-standard": "^28.0.0",
     "stylelint-order": "^5.0.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "yarn eslint"
+    ],
+    "**/*.{css,less,scss}": [
+      "yarn lint:css"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo 'git commit trigger husky pre-commit hook'"
+    }
   }
 }
