@@ -44,8 +44,11 @@
     "stylelint-order": "^5.0.0"
   },
   "lint-staged": {
+    "*": [
+      "yarn husky:init"
+    ],
     "**/*.{ts,tsx}": [
-      "yarn eslint"
+      "yarn eslint:fix"
     ],
     "**/*.{css,less,scss}": [
       "yarn lint:css"
