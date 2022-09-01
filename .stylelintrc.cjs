@@ -236,6 +236,7 @@ module.exports = {
     "**/*.eot",
     "**/*.ttf",
     "**/*.woff",
+    "**/*.svg",
     "**/*.eslintignore"
   ],
 };
