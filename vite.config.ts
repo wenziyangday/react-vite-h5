@@ -8,6 +8,14 @@ export default defineConfig(() => ({
   base: process.env.NODE_ENV === "production" ? "./" : "./",
   plugins: [react()],
   css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        charset: false,
+        // 设置全局样式
+        additionalData: "@import \"./src/assets/g.less\";"
+      }
+    },
     postcss: {
       plugins: [
         postCssPxToViewport({
@@ -21,7 +29,7 @@ export default defineConfig(() => ({
           minPixelValue: 1, // 默认值1，小于或等于1px则不进行转换
           mediaQuery: true, // 是否在媒体查询的css代码中也进行转换，默认false
           replace: true, // 是否转换后直接更换属性值
-          exclude: [/node_modules/], // 设置忽略文件，用正则做目录名匹配
+          exclude: [/node_modules/, /g.less/, /antd/], // 设置忽略文件，用正则做目录名匹配
           // exclude: [],
           landscape: false // 是否处理横屏情况
         })
@@ -49,9 +57,8 @@ export default defineConfig(() => ({
     alias: [{
       find: "@",
       replacement: path.resolve(__dirname, "src")
-    }, {
-      find: "component",
-      replacement: path.resolve(__dirname, "src/component")
-    }]
+    },
+    { find: /^~/, replacement: "" }
+    ]
   }
 }));
